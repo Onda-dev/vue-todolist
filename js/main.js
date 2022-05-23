@@ -33,15 +33,15 @@ const app = new Vue({
         newTodo: {
             text: "",
             done: false
-        }
+        },
     },
     methods: {
         addTodo(){
-            if (this.newTodo !== " ") {
+            if (this.newTodo.text !== " ") {
             this.todos.push(this.newTodo)
             this.newTodo = ""
             }
-        }
+        },
     }
 })
 
