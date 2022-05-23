@@ -23,7 +23,7 @@
            
             <div class="todos-container">
                 <ul>
-                    <li v-for="todo in todos">{{todo.text}}</li>
+                    <li v-for="todo in todos" :class="{done: todos.done}">{{todo.text}}</li>
                 </ul>
             </div>
 
