@@ -37,7 +37,10 @@ const app = new Vue({
     },
     methods: {
         addTodo(){
+            if (this.newTodo !== " ") {
             this.todos.push(this.newTodo)
+            this.newTodo = ""
+            }
         }
     }
 })
