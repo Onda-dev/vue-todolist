@@ -11,6 +11,15 @@
     <body>
 
         <div id="app" class="container">
+
+            <div class="header">
+
+                <form @submit.prevent="addTodo()">
+                    <input type="text" placeholder="Aggiungi promemoria" v-model="newTodo.text" required>
+                    <button type="submit">Aggiungi</button>
+                </form>
+
+            </div>
            
             <div class="todos-container">
                 <ul>

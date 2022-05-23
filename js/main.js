@@ -29,9 +29,18 @@ const app = new Vue({
                 text: "andare in palestra",
                 done: true
             }
-        ]
+        ],
+        newTodo: {
+            text: "",
+            done: false
+        }
     },
     methods: {
-
+        addTodo(){
+            this.todos.push(this.newTodo)
+        }
     }
 })
+
+
+
