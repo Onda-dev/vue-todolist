@@ -46,7 +46,13 @@ const app = new Vue({
             this.todos.splice(index, 1)
         },
         doneTodo(){
-            
+            this.todos.forEach(element => {
+                if (element.done === true) {
+                    return element.done = false
+                } else {
+                    return element.done = true
+                }
+            })
         },
     }
 })

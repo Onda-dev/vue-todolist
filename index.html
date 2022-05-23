@@ -25,7 +25,7 @@
                 <ul>
                     <li v-for="todo in todos" :class="{done: todo.done}">
                         {{todo.text}}
-                        <span @click="doneTodo">V</span><span @click="removeTodo()">X</span>
+                        <span @click="doneTodo">V</span><span @click="removeTodo">X</span>
                     </li>
                 </ul>
             </div>
