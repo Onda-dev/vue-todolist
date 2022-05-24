@@ -15,7 +15,7 @@
             <div class="header">
 
                 <form @submit.prevent="addTodo()">
-                    <input type="text" placeholder="Aggiungi promemoria" v-model="newTodo.text" required>
+                    <input type="text" placeholder="Aggiungi promemoria" v-model="newTodo" required>
                     <button type="submit">Aggiungi</button>
                 </form>
 
@@ -23,9 +23,9 @@
            
             <div class="todos-container">
                 <ul>
-                    <li v-for="todo in todos" :class="{done: todo.done}">
+                    <li v-for="(todo, index) in todos" :class="{done: todo.done}">
                         {{todo.text}}
-                        <span @click="doneTodo">V</span><span @click="removeTodo">X</span>
+                        <span @click="todo.done = !todo.done">V</span><span @click="removeTodo">X</span>
                     </li>
                 </ul>
             </div>

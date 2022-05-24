@@ -30,29 +30,22 @@ const app = new Vue({
                 done: true
             }
         ],
-        newTodo: {
-            text: "",
-            done: false
-        },
+        newTodo: ""
     },
     methods: {
         addTodo(){
-            if (this.newTodo.text !== " ") {
-            this.todos.push(this.newTodo)
+            
+            if (this.newTodo !== " ") {
+                const newTodo = {
+                    text: this.newTodo,
+                    done: false
+                }
+            this.todos.push(newTodo)
             this.newTodo = ""
             }
         },
         removeTodo(index){
             this.todos.splice(index, 1)
-        },
-        doneTodo(){
-            this.todos.forEach(element => {
-                if (element.done === true) {
-                    return element.done = false
-                } else {
-                    return element.done = true
-                }
-            })
         },
     }
 })
